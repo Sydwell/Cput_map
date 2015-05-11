@@ -9,21 +9,17 @@
 
         <style>
             html, body {
-                height: 1%;
+                height: 100%;
                 margin: 0px;
                 padding: 0px
             }
             #map-canvas {
                 
-                height: 1%;
+                height: 90%;
                 margin: 0px;
                 padding: 0px
             }
-            #cput_locate_btn {
-                position: absolute;
-                top: 300px; //Ypos
-                left: 0px; //Xpos
-            }
+            
         </style>
         <script src="js/vendor/jquery-2.1.3.js"></script>
         <script src="js/vendor/bootstrap.js"></script>
