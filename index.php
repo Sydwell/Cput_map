@@ -6,30 +6,68 @@
         <title>Simple Map</title>
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
         <meta charset="utf-8">
+
         <style>
-            html, body, #map-canvas {
-                height: 100%;
+            html, body {
+                height: 1%;
                 margin: 0px;
                 padding: 0px
             }
+            #map-canvas {
+                
+                height: 1%;
+                margin: 0px;
+                padding: 0px
+            }
+            #cput_locate_btn {
+                position: absolute;
+                top: 300px; //Ypos
+                left: 0px; //Xpos
+            }
         </style>
+        <script src="js/vendor/jquery-2.1.3.js"></script>
+        <script src="js/vendor/bootstrap.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
         <script>
-            var map;
-            function initialize() {
+            $('document').ready(function () {
+                var castle = new google.maps.LatLng(-33.9260235, 18.427518);
+                var markerCastle = new google.maps.Marker({
+                    position: castle,
+                });
+                var absaCentre = new google.maps.LatLng(-33.9204413, 18.430199);
+                var markerAbsa = new google.maps.Marker({
+                    position: absaCentre,
+                });
+               // var cput = new google.maps.LatLng(-33.931235, 18.4242882);
+               var cput = new google.maps.LatLng(-33.931235, 18.430199);
+                var markerCput = new google.maps.Marker({
+                    position: cput,
+                });
+                var map;
                 var mapOptions = {
-                    zoom: 16,
+                    zoom: 15,
                     center: new google.maps.LatLng(-33.93, 18.42)
                 };
                 map = new google.maps.Map(document.getElementById('map-canvas'),
                         mapOptions);
-            }
+                markerCastle.setMap(map);
+                markerAbsa.setMap(map);
+                markerCput.setMap(map);
 
-            google.maps.event.addDomListener(window, 'load', initialize);
-
+                $("#cput_locate_btn").click(function () {
+                    //map.setZoom(17);
+                    map.setCenter(markerCput.getPosition());
+                });
+                $("#absa_locate_btn").click(function () {
+                //    map.setZoom(17);
+                    map.setCenter(markerAbsa.getPosition());
+                });
+            });
         </script>
     </head>
     <body>
         <div id="map-canvas"></div>
+        <button id='absa_locate_btn'>Absa Centre</button>
+        <button id='cput_locate_btn'>CPUT</button>
     </body>
 </html>
