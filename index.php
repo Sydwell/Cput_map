@@ -30,7 +30,7 @@
                 var markerCastle = new google.maps.Marker({
                     position: castle,
                 });
-                var absaCentre = new google.maps.LatLng(-33.9204413, 18.430199);
+                var absaCentre = new google.maps.LatLng(-33.9204413, 18.450199);
                 var markerAbsa = new google.maps.Marker({
                     position: absaCentre,
                 });
