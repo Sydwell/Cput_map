@@ -58,6 +58,10 @@
                 //    map.setZoom(17);
                     map.setCenter(markerAbsa.getPosition());
                 });
+                 $("#castle_locate_btn").click(function () {
+                //    map.setZoom(17);
+                    map.setCenter(markerCastle.getPosition());
+                });
             });
         </script>
     </head>
@@ -65,5 +69,6 @@
         <div id="map-canvas"></div>
         <button id='absa_locate_btn'>Absa Centre</button>
         <button id='cput_locate_btn'>CPUT</button>
+        <button id='castle_locate_btn'>Castle</button>
     </body>
 </html>
