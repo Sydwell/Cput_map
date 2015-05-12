@@ -13,7 +13,7 @@ The following steps highlights a bullet-proof way recreating the  Cput Map proje
 
 2... Pick a unique project identifier say friday. 
 
-3... In netbeans click on any project in the project. (Really it does mtter which one)
+3... In netbeans click on any project in the project. (Really it does matter which one)
 
 4... On the main tool bar click team. Hover over Git, then select Clone.
 
