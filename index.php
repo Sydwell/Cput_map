@@ -51,15 +51,15 @@
                 markerCput.setMap(map);
 
                 $("#cput_locate_btn").click(function () {
-                    //map.setZoom(17);
+                    map.setZoom(17);
                     map.setCenter(markerCput.getPosition());
                 });
                 $("#absa_locate_btn").click(function () {
-                //    map.setZoom(17);
+                    map.setZoom(16);
                     map.setCenter(markerAbsa.getPosition());
                 });
                  $("#castle_locate_btn").click(function () {
-                //    map.setZoom(17);
+                    map.setZoom(15);
                     map.setCenter(markerCastle.getPosition());
                 });
             });
